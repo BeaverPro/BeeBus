@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:beebus/screens/tabs/home_tab.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -12,9 +13,10 @@ class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [
-    const Center(child: Text("Home", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold))),
-    const Center(child: Text("Explore", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold))),
-    const Center(child: Text("Favorites", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold))),
+    const HomeTab(),
+    const Center(child: Text("Wallet", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold))),
+    const Center(child: Text("Trips", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold))),
+    const Center(child: Text("Message", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold))),
     const Center(child: Text("Profile", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold))),
   ];
 
@@ -60,8 +62,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 items: const [
                   BottomNavigationBarItem(icon: Icon(Icons.home_rounded), label: 'Home'),
-                  BottomNavigationBarItem(icon: Icon(Icons.explore_rounded), label: 'Explore'),
-                  BottomNavigationBarItem(icon: Icon(Icons.favorite_rounded), label: 'Favorites'),
+                  BottomNavigationBarItem(icon: Icon(Icons.account_balance_wallet_rounded), label: 'Wallet'),
+                  BottomNavigationBarItem(icon: Icon(Icons.directions_bus_rounded), label: 'Trips'),
+                  BottomNavigationBarItem(icon: Icon(Icons.message_rounded), label: 'Message'),
                   BottomNavigationBarItem(icon: Icon(Icons.person_rounded), label: 'Profile'),
                 ],
               ),
