@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:beebus/screens/tabs/home_tab.dart';
+import 'package:beebus/screens/tabs/profile_tab.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -17,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const Center(child: Text("Wallet", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold))),
     const Center(child: Text("Trips", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold))),
     const Center(child: Text("Message", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold))),
-    const Center(child: Text("Profile", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold))),
+    const ProfileTab(),
   ];
 
   @override
